@@ -30,7 +30,6 @@ function preload()
 
 function setup() {     
 	createCanvas(800, 700); 
-	startMusic.play();
 	rectMode(CENTER);
 
 	block=createSprite(400,200,10000,10000);
@@ -91,6 +90,9 @@ function draw() {
   rectMode(CENTER);
   if(gameState==START){
     background(gameStartImg);
+	if(frameCount==20){
+        startMusic.play();
+	}
 	helicopterSprite.visible=false;
 	packageSprite.visible=false;
 	boxleftSprite.visible=false;
